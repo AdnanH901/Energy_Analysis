@@ -1,0 +1,11 @@
+dash
+dash-bootstrap-components
+plotly
+pandas
+numpy
+dash-table
+dash-ag-grid
+dash-breakpoints
+openpyxl
+shutil
+os

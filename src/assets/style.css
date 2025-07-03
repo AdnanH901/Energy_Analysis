@@ -1,0 +1,134 @@
+/* Layout & Structure */
+
+html, body, #root, .dash-app {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5rem; /* Initial width of the sidebar */
+  padding: 2rem 1rem; 
+  background-color: #000000;
+  z-index: 1050;
+  transition: width 0.1s ease-in-out;
+}
+
+.sidebar:hover {
+  width: 19rem; /* Width of the sidebar when hovered */
+}
+
+.sidebar .nav-link {
+  color: #ff402f;
+  background-color: transparent;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sidebar .nav-link:hover {
+  color: white;
+  font-weight: bold;
+  background-color: #444;
+}
+
+.sidebar .nav-link.active {
+  color: white;
+  background-color: #222;
+  font-weight: bold;
+}
+
+.sidebar .nav-link span {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.sidebar:hover .nav-link span {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sidebar-header h2 {
+  opacity: 0;
+  margin-left: 1rem;
+  margin-bottom: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.sidebar:hover .sidebar-header h2 {
+  opacity: 1;
+}
+
+.content {
+  margin-left: 5.01565rem;
+  padding: 2rem 1rem;
+  background-color: #000000;
+  min-height: 100vh;
+  color: white;
+}
+
+.chart-container {
+  border: 1px solid #000000;
+  padding: 1rem;
+  background-color: #000000;
+}
+
+/* Dropdown Styling */
+
+.Select-control {
+  background-color: #2a2a2a !important;
+  border: 1px solid #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+.Select-placeholder {
+  color: #ffffff !important;
+}
+
+.Select-value-label {
+  color: #ffffff !important;
+}
+
+.Select-input > input {
+  color: #ffffff !important;
+}
+
+.Select-menu-outer {
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+  border: 1px solid #1a1a1a !important;
+}
+
+.Select-option {
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+}
+
+/* Optional: Highlighted option */
+.Select-option.is-focused {
+  background-color: #444444 !important;
+  color: #ffffff !important;
+}
+
+/* Move the year marks above the slider */
+.rc-slider-mark {
+    top: -25px; /* Adjust as needed */
+}
+
+/* Optional: center labels more precisely */
+.rc-slider-mark-text {
+    transform: translateX(-50%);
+    color: #ffffff;
+}
